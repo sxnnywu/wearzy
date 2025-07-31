@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Light mode (default for users with light preference) */
+    --background: 0 0% 100%;
+    --foreground: 230 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 15% 15%;
+
+    --primary: 285 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 230 15% 15%;
+
+    --muted: 220 13% 96%;
+    --muted-foreground: 230 10% 50%;
+
+    --accent: 220 13% 96%;
+    --accent-foreground: 230 15% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 285 100% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Wearzy brand colors - Bright purple/magenta theme */
+    --wearzy-50: 285 100% 98%;
+    --wearzy-100: 285 100% 95%;
+    --wearzy-200: 285 100% 90%;
+    --wearzy-300: 285 100% 80%;
+    --wearzy-400: 285 100% 70%;
+    --wearzy-500: 285 100% 65%;
+    --wearzy-600: 285 100% 60%;
+    --wearzy-700: 285 100% 55%;
+    --wearzy-800: 285 100% 45%;
+    --wearzy-900: 285 100% 35%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark mode based on device preference */
+      --background: 260 15% 8%;
+      --foreground: 0 0% 95%;
+
+      --card: 260 15% 10%;
+      --card-foreground: 0 0% 95%;
+
+      --popover: 260 15% 10%;
+      --popover-foreground: 0 0% 95%;
+
+      --primary: 285 100% 65%;
+      --primary-foreground: 260 15% 8%;
+
+      --secondary: 260 10% 15%;
+      --secondary-foreground: 0 0% 95%;
+
+      --muted: 260 10% 15%;
+      --muted-foreground: 260 5% 65%;
+
+      --accent: 260 10% 15%;
+      --accent-foreground: 0 0% 95%;
+
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 0 0% 100%;
+
+      --border: 260 10% 20%;
+      --input: 260 10% 20%;
+      --ring: 285 100% 65%;
+
+      --sidebar-background: 240 5.9% 10%;
+      --sidebar-foreground: 240 4.8% 95.9%;
+      --sidebar-primary: 224.3 76.3% 48%;
+      --sidebar-primary-foreground: 0 0% 100%;
+      --sidebar-accent: 240 3.7% 15.9%;
+      --sidebar-accent-foreground: 240 4.8% 95.9%;
+      --sidebar-border: 240 3.7% 15.9%;
+      --sidebar-ring: 217.2 91.2% 59.8%;
+
+      /* Dark theme Wearzy colors */
+      --wearzy-50: 260 15% 12%;
+      --wearzy-100: 260 15% 15%;
+      --wearzy-200: 260 15% 20%;
+      --wearzy-300: 260 15% 30%;
+      --wearzy-400: 285 100% 80%;
+      --wearzy-500: 285 100% 65%;
+      --wearzy-600: 285 100% 60%;
+      --wearzy-700: 285 100% 55%;
+      --wearzy-800: 285 100% 70%;
+      --wearzy-900: 285 100% 75%;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
